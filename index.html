@@ -1,197 +1,240 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Currículo</title>
-    <style>
-        /* Reset e Estilos Gerais */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Cabeçalho */
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 20px;
-        }
-        
-        h1 {
-            color: #3498db;
-            margin-bottom: 10px;
-        }
-        
-        .contact-info {
-            margin-top: 10px;
-        }
-        
-        /* Seções */
-        section {
-            margin-bottom: 25px;
-        }
-        
-        h2 {
-            color: #3498db;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-        
-        .job, .education {
-            margin-bottom: 20px;
-        }
-        
-        .job h3, .education h3 {
-            margin-bottom: 5px;
-        }
-        
-        .date {
-            color: #777;
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        
-        /* Skills */
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .skill {
-            background: #3498db;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        
-        /* Botão de Impressão */
-        .print-btn {
-            display: block;
-            width: 100px;
-            margin: 20px auto;
-            padding: 10px;
-            background: #3498db;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-        }
-        
-        .print-btn:hover {
-            background: #2980b9;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo - Anderson Cristovão</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 20px;
+      position: relative;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #3498db;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: #3498db;
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      margin-top: 10px;
+    }
+
+    section {
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      color: #3498db;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    .job, .education {
+      margin-bottom: 20px;
+    }
+
+    .job h3, .education h3 {
+      margin-bottom: 5px;
+    }
+
+    .date {
+      color: #777;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #3498db;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .print-btn, .whatsapp-btn {
+      display: block;
+      width: 200px;
+      margin: 10px auto;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .print-btn {
+      background: #3498db;
+      color: white;
+    }
+
+    .print-btn:hover {
+      background: #2980b9;
+    }
+
+    .whatsapp-btn {
+      background-color: #25D366;
+      color: white;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebc57;
+    }
+
+    @media (max-width: 600px) {
+      .skills {
+        flex-direction: column;
+      }
+
+      .skill {
+        width: 100%;
+        text-align: center;
+      }
+
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1 id="nome">Seu Nome</h1>
-            <p id="cargo">Profissão/Cargo Desejado</p>
-            <div class="contact-info">
-                <p id="email">Email: seuemail@exemplo.com</p>
-                <p id="telefone">Telefone: (00) 00000-0000</p>
-                <p id="linkedin">LinkedIn: <a href="#" target="_blank">linkedin.com/seu-perfil</a></p>
-            </div>
-        </header>
-        
-        <section>
-            <h2>Resumo Profissional</h2>
-            <p id="resumo">Um breve resumo sobre sua experiência, habilidades e objetivos profissionais.</p>
-        </section>
-        
-        <section>
-            <h2>Experiência Profissional</h2>
-            <div class="job">
-                <h3 id="cargo1">Cargo na Empresa 1</h3>
-                <p id="empresa1">Empresa 1</p>
-                <p class="date" id="periodo1">Jan 2020 - Dez 2022</p>
-                <p id="descricao1">Descrição das responsabilidades e conquistas no cargo.</p>
-            </div>
-            <div class="job">
-                <h3 id="cargo2">Cargo na Empresa 2</h3>
-                <p id="empresa2">Empresa 2</p>
-                <p class="date" id="periodo2">Mar 2018 - Dez 2019</p>
-                <p id="descricao2">Descrição das responsabilidades e conquistas no cargo.</p>
-            </div>
-        </section>
-        
-        <section>
-            <h2>Formação Acadêmica</h2>
-            <div class="education">
-                <h3 id="curso1">Nome do Curso</h3>
-                <p id="instituicao1">Instituição de Ensino</p>
-                <p class="date" id="periodo-curso1">Ano de Conclusão: 2020</p>
-            </div>
-        </section>
-        
-        <section>
-            <h2>Habilidades</h2>
-            <div class="skills" id="habilidades">
-                <!-- As habilidades serão inseridas via JavaScript -->
-            </div>
-        </section>
-        
-        <button class="print-btn" onclick="window.print()">Imprimir</button>
-    </div>
+  <div class="container">
+    <header>
+      <!-- Foto do trabalhador -->
+      <img src="https://via.placeholder.com/120" alt="Foto de perfil" class="profile-pic" id="foto">
+      
+      <h1 id="nome">Seu Nome</h1>
+      <p id="cargo">Profissão/Cargo Desejado</p>
+      <div class="contact-info">
+        <p id="email">Email: seuemail@exemplo.com</p>
+        <p id="telefone">Telefone: (00) 00000-0000</p>
+        <p id="linkedin">LinkedIn: <a href="#" target="_blank">linkedin.com/seu-perfil</a></p>
+      </div>
+    </header>
 
-    <script>
-        // Dados dinâmicos (pode ser substituído por um JSON ou API)
-        document.getElementById('nome').textContent = 'Anderson Cristovão';
-        document.getElementById('cargo').textContent = 'Desenvolvedor Front-End';
-        document.getElementById('email').textContent = 'Email: andersoncristovao5790@gmail.com';
-        document.getElementById('telefone').textContent = 'Telefone: (79) 9 9913-8396';
-        document.getElementById('linkedin').innerHTML = 'LinkedIn: <a href="https://linkedin.com/in/joaosilva" target="_blank">linkedin.com/in/joaosilva</a>';
-        
-        document.getElementById('resumo').textContent = 'Desenvolvedor Front-End com 5 anos de experiência em React, JavaScript e CSS. Apaixonado por criar interfaces responsivas e otimizadas para o usuário.';
-        
-        document.getElementById('cargo1').textContent = 'Desenvolvedor Front-End Pleno';
-        document.getElementById('empresa1').textContent = 'Tech Solutions Inc.';
-        document.getElementById('periodo1').textContent = 'Jan 2020 - Dez 2022';
-        document.getElementById('descricao1').textContent = 'Desenvolvimento de aplicações web com React e TypeScript. Colaboração em projetos de alta escala com equipes multidisciplinares.';
-        
-        document.getElementById('cargo2').textContent = 'Desenvolvedor Front-End Júnior';
-        document.getElementById('empresa2').textContent = 'WebDev Agency';
-        document.getElementById('periodo2').textContent = 'Mar 2018 - Dez 2019';
-        document.getElementById('descricao2').textContent = 'Implementação de layouts responsivos e otimização de performance.';
-        
-        document.getElementById('curso1').textContent = 'Bacharelado em Ciência da Computação';
-        document.getElementById('instituicao1').textContent = 'Universidade XYZ';
-        document.getElementById('periodo-curso1').textContent = 'Ano de Conclusão: 2020';
-        
-        // Habilidades (pode ser um array)
-        const habilidades = ['HTML5', 'CSS3', 'JavaScript', 'React', 'TypeScript', 'Git', 'Responsive Design'];
-        const habilidadesContainer = document.getElementById('habilidades');
-        
-        habilidades.forEach(habilidade => {
-            const skillElement = document.createElement('span');
-            skillElement.className = 'skill';
-            skillElement.textContent = habilidade;
-            habilidadesContainer.appendChild(skillElement);
-        });
-    </script>
+    <section>
+      <h2>Resumo Profissional</h2>
+      <p id="resumo">Um breve resumo sobre sua experiência, habilidades e objetivos profissionais.</p>
+    </section>
+
+    <section>
+      <h2>Experiência Profissional</h2>
+      <div class="job">
+        <h3 id="cargo1">Cargo na Empresa 1</h3>
+        <p id="empresa1">Empresa 1</p>
+        <p class="date" id="periodo1">Jan 2020 - Dez 2022</p>
+        <p id="descricao1">Descrição das responsabilidades e conquistas no cargo.</p>
+      </div>
+      <div class="job">
+        <h3 id="cargo2">Cargo na Empresa 2</h3>
+        <p id="empresa2">Empresa 2</p>
+        <p class="date" id="periodo2">Mar 2018 - Dez 2019</p>
+        <p id="descricao2">Descrição das responsabilidades e conquistas no cargo.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Formação Acadêmica</h2>
+      <div class="education">
+        <h3 id="curso1">Nome do Curso</h3>
+        <p id="instituicao1">Instituição de Ensino</p>
+        <p class="date" id="periodo-curso1">Ano de Conclusão: 2020</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Habilidades</h2>
+      <div class="skills" id="habilidades">
+        <!-- JavaScript insere aqui -->
+      </div>
+    </section>
+
+    <!-- Botões -->
+    <button class="print-btn" onclick="window.print()">Imprimir</button>
+    <a href="https://wa.me/557999138396" class="whatsapp-btn" target="_blank">Contato via WhatsApp</a>
+  </div>
+
+  <script>
+    // Preenchimento dinâmico
+    document.getElementById('nome').textContent = 'Anderson Cristovão';
+    document.getElementById('cargo').textContent = 'Desenvolvedor Front-End';
+    document.getElementById('email').textContent = 'Email: andersoncristovao5790@gmail.com';
+    document.getElementById('telefone').textContent = 'Telefone: (79) 9 9913-8396';
+    document.getElementById('linkedin').innerHTML = 'LinkedIn: <a href="https://linkedin.com/in/andersoncristovao" target="_blank">linkedin.com/in/andersoncristovao</a>';
+    
+    document.getElementById('resumo').textContent = 'Desenvolvedor Front-End com 5 anos de experiência em React, JavaScript e CSS. Apaixonado por criar interfaces responsivas e otimizadas para o usuário.';
+    
+    document.getElementById('cargo1').textContent = 'Desenvolvedor Front-End Pleno';
+    document.getElementById('empresa1').textContent = 'Tech Solutions Inc.';
+    document.getElementById('periodo1').textContent = 'Jan 2020 - Dez 2022';
+    document.getElementById('descricao1').textContent = 'Desenvolvimento de aplicações web com React e TypeScript. Colaboração em projetos de alta escala com equipes multidisciplinares.';
+    
+    document.getElementById('cargo2').textContent = 'Desenvolvedor Front-End Júnior';
+    document.getElementById('empresa2').textContent = 'WebDev Agency';
+    document.getElementById('periodo2').textContent = 'Mar 2018 - Dez 2019';
+    document.getElementById('descricao2').textContent = 'Implementação de layouts responsivos e otimização de performance.';
+    
+    document.getElementById('curso1').textContent = 'Bacharelado em Ciência da Computação';
+    document.getElementById('instituicao1').textContent = 'Universidade XYZ';
+    document.getElementById('periodo-curso1').textContent = 'Ano de Conclusão: 2020';
+    
+    // Habilidades
+    const habilidades = ['HTML5', 'CSS3', 'JavaScript', 'React', 'TypeScript', 'Git', 'Responsive Design'];
+    const habilidadesContainer = document.getElementById('habilidades');
+
+    habilidades.forEach(habilidade => {
+      const skillElement = document.createElement('span');
+      skillElement.className = 'skill';
+      skillElement.textContent = habilidade;
+      habilidadesContainer.appendChild(skillElement);
+    });
+
+    // Foto do perfil (pode ser alterada)
+    document.getElementById('foto').src = 'https://via.placeholder.com/120'; // Substitua por uma URL real da foto
+  </script>
 </body>
 </html>
