@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+A<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,17 +52,73 @@
 
     .contact-info {
       margin-top: 10px;
+    }<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Currículo - Anderson Cristovão</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #3498db;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: #3498db;
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    .subinfo {
+      font-size: 16px;
+      color: #666;
     }
 
     section {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
     h2 {
       color: #3498db;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 5px;
+      font-size: 20px;
       margin-bottom: 15px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
     }
 
     .job, .education {
@@ -87,41 +143,50 @@
 
     .skill {
       background: #3498db;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 20px;
       font-size: 14px;
     }
 
-    .print-btn, .whatsapp-btn {
-      display: block;
-      width: 200px;
-      margin: 10px auto;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
       text-align: center;
-      cursor: pointer;
-      font-weight: bold;
+      font-size: 30px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebc57;
     }
 
     .print-btn {
-      background: #3498db;
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 20px;
+      background-color: #3498db;
       color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
     }
 
     .print-btn:hover {
-      background: #2980b9;
-    }
-
-    .whatsapp-btn {
-      background-color: #25D366;
-      color: white;
-    }
-
-    .whatsapp-btn:hover {
-      background-color: #1ebc57;
+      background-color: #2980b9;
     }
 
     @media (max-width: 600px) {
@@ -144,97 +209,53 @@
 <body>
   <div class="container">
     <header>
-      <!-- Foto do trabalhador -->
-      <img src="https://via.placeholder.com/120" alt="Foto de perfil" class="profile-pic" id="foto">
-      
-      <h1 id="nome">Seu Nome</h1>
-      <p id="cargo">Profissão/Cargo Desejado</p>
-      <div class="contact-info">
-        <p id="email">Email: seuemail@exemplo.com</p>
-        <p id="telefone">Telefone: (00) 00000-0000</p>
-        <p id="linkedin">LinkedIn: <a href="#" target="_blank">linkedin.com/seu-perfil</a></p>
-      </div>
+      <img src="https://static.wikia.nocookie.net/dragonball/images/e/ea/Goku_SSJ4.png" alt="Goku SSJ4" class="profile-pic">
+      <h1>Anderson Cristovão Santana Santos</h1>
+      <p class="subinfo">Área: BSI | Simão Dias - SE</p>
+      <p class="subinfo">Telefone: (79) 9 9913-8396 | Email: andersoncristovao5790@gmail.com</p>
     </header>
 
     <section>
       <h2>Resumo Profissional</h2>
-      <p id="resumo">Um breve resumo sobre sua experiência, habilidades e objetivos profissionais.</p>
+      <p>Uma pessoa muito comunicativa, exigente, que gosta de fazer as coisas certas sempre buscando o melhor de mim e dos outros.</p>
     </section>
 
     <section>
       <h2>Experiência Profissional</h2>
       <div class="job">
-        <h3 id="cargo1">Cargo na Empresa 1</h3>
-        <p id="empresa1">Empresa 1</p>
-        <p class="date" id="periodo1">Jan 2020 - Dez 2022</p>
-        <p id="descricao1">Descrição das responsabilidades e conquistas no cargo.</p>
-      </div>
-      <div class="job">
-        <h3 id="cargo2">Cargo na Empresa 2</h3>
-        <p id="empresa2">Empresa 2</p>
-        <p class="date" id="periodo2">Mar 2018 - Dez 2019</p>
-        <p id="descricao2">Descrição das responsabilidades e conquistas no cargo.</p>
+        <h3>Auxiliar Administrativo, Técnico em Informática</h3>
+        <p>Luciana Santa Rosa de Souza</p>
+        <p class="date">Fev 2023 – Jun 2025</p>
+        <p>Atuação em tarefas administrativas e suporte técnico em informática, contribuindo para a organização e funcionamento eficaz dos processos internos.</p>
       </div>
     </section>
 
     <section>
       <h2>Formação Acadêmica</h2>
       <div class="education">
-        <h3 id="curso1">Nome do Curso</h3>
-        <p id="instituicao1">Instituição de Ensino</p>
-        <p class="date" id="periodo-curso1">Ano de Conclusão: 2025</p>
+        <h3>Redes de Computadores</h3>
+        <p>CREJA Prof. Marcos Ferreira</p>
+        <p class="date">Ano de conclusão: 2025</p>
       </div>
     </section>
 
     <section>
       <h2>Habilidades</h2>
-      <div class="skills" id="habilidades">
-        <!-- JavaScript insere aqui -->
+      <div class="skills">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Git</span>
+        <span class="skill">GitHub</span>
       </div>
     </section>
 
-    <!-- Botões -->
-    <button class="print-btn" onclick="window.print()">Imprimir</button>
-    <a href="https://wa.me/557999138396" class="whatsapp-btn" target="_blank">Contato via WhatsApp</a>
+    <button class="print-btn" onclick="window.print()">Imprimir Currículo</button>
   </div>
 
-  <script>
-    // Preenchimento dinâmico
-    document.getElementById('nome').textContent = 'Anderson Cristovão';
-    document.getElementById('cargo').textContent = 'Desenvolvedor Front-End';
-    document.getElementById('email').textContent = 'Email: andersoncristovao5790@gmail.com';
-    document.getElementById('telefone').textContent = 'Telefone: (79) 9 9913-8396';
-    document.getElementById('linkedin').innerHTML = 'LinkedIn: <a href="https://linkedin.com/in/andersoncristovao" target="_blank">linkedin.com/in/andersoncristovao</a>';
-    
-    document.getElementById('resumo').textContent = 'Desenvolvedor Front-End com 5 anos de experiência em React, JavaScript e CSS. Apaixonado por criar interfaces responsivas e otimizadas para o usuário.';
-    
-    document.getElementById('cargo1').textContent = 'Auxiliar Adiministrativo';
-    document.getElementById('empresa1').textContent = 'Luciana Santa Rosa de Souza';
-    document.getElementById('periodo1').textContent = 'Fev 2023 - Jun 2025';
-    document.getElementById('descricao1').textContent = 'Desenvolvimento de aplicações web com React e TypeScript. Colaboração em projetos de alta escala com equipes multidisciplinares.';
-    
-    document.getElementById('cargo2').textContent = 'Desenvolvedor Front-End Júnior';
-    document.getElementById('empresa2').textContent = 'WebDev Agency';
-    document.getElementById('periodo2').textContent = 'Mar 2018 - Dez 2019';
-    document.getElementById('descricao2').textContent = 'Implementação de layouts responsivos e otimização de performance.';
-    
-    document.getElementById('curso1').textContent = 'Bacharelado em Ciência da Computação';
-    document.getElementById('instituicao1').textContent = 'Universidade XYZ';
-    document.getElementById('periodo-curso1').textContent = 'Ano de Conclusão: 2020';
-    
-    // Habilidades
-    const habilidades = ['HTML5', 'CSS3', 'JavaScript', 'React', 'TypeScript', 'Git', 'Responsive Design'];
-    const habilidadesContainer = document.getElementById('habilidades');
-
-    habilidades.forEach(habilidade => {
-      const skillElement = document.createElement('span');
-      skillElement.className = 'skill';
-      skillElement.textContent = habilidade;
-      habilidadesContainer.appendChild(skillElement);
-    });
-
-    // Foto do perfil (pode ser alterada)
-    document.getElementById('foto').src = 'https://via.placeholder.com/120'; // Substitua por uma URL real da foto
-  </script>
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/557999138396" class="whatsapp-float" target="_blank" title="Fale comigo no WhatsApp">
+    💬
+  </a>
 </body>
 </html>
